@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Quest | Learn by Playing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">⌘</span><div><strong>SOFTWARE QUEST</strong><small>Learn by playing</small></div></div>
+      <div class="top-stats"><span>⭐ <b id="score">0</b></span><span>❤️ <b id="lives">3</b></span></div>
+    </header>
+    <section id="welcome" class="screen welcome">
+      <div class="welcome-copy">
+        <p class="eyebrow">INTERACTIVE CHALLENGE</p>
+        <h1>How much do you<br><span>know about software?</span></h1>
+        <p>Complete four levels, identify each type of software, and show what you have learned.</p>
+        <button id="startBtn" class="primary-btn">Start Adventure <span>→</span></button>
+        <div class="mini-note">4 levels · Increasing difficulty · 3 lives</div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-laptop"><div class="screen-glow">{"{ }"}<br><span>SOFTWARE</span></div><div class="keyboard"></div></div>
+        <div class="float-card card-a">💻</div><div class="float-card card-b">🧩</div><div class="float-card card-c">🚀</div>
+      </div>
+    </section>
+    <section id="game" class="screen hidden">
+      <div class="progress-row"><span id="levelLabel">LEVEL 1 OF 4</span><span id="questionLabel">QUESTION 1</span></div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="game-grid">
+        <aside class="level-card">
+          <div class="level-art" id="levelArt">💳</div>
+          <p class="eyebrow">SOFTWARE TYPE</p>
+          <h2 id="categoryTitle">Commercial Software</h2>
+          <p id="levelHint">Think about programs that you buy.</p>
+          <div class="difficulty"><span>DIFFICULTY</span><b id="difficulty">EASY</b></div>
+        </aside>
+        <section class="question-card">
+          <div class="question-meta"><span id="roundTag">ROUND 1</span><span id="pointsTag">+100 POINTS</span></div>
+          <h2 id="questionText">What is the best description?</h2>
+          <div id="visual" class="visual"></div>
+          <div id="answers" class="answers"></div>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="nextBtn" class="primary-btn next-btn hidden">Next Question →</button>
+        </section>
+      </div>
+    </section>
+    <section id="result" class="screen hidden result-screen">
+      <div class="result-icon" id="resultIcon">🏆</div>
+      <p class="eyebrow">ADVENTURE COMPLETED</p>
+      <h1 id="resultTitle">Great job!</h1>
+      <p id="resultText"></p>
+      <div class="result-stats"><div><strong id="finalScore">0</strong><span>POINTS</span></div><div><strong id="correctCount">0/12</strong><span>CORRECT ANSWERS</span></div></div>
+      <button id="restartBtn" class="primary-btn">Play Again ↻</button>
+    </section>
+    <footer>SOFTWARE QUEST <span>•</span> Practice and improve with every level</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
